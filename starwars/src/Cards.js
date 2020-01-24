@@ -48,7 +48,7 @@ const CharCard = props => {
             {props.names.map(e => {
                 return (
                     <CardHolder>
-                    <StyledList key={props.names}><h2><strong>{e.name}</strong></h2>
+                    <StyledList key={e.name}><h2><strong>{e.name}</strong></h2>
                     <br/>
                     <br/>
                     <strong>Born: </strong> {e.birth_year}
