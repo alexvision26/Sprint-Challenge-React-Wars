@@ -8,8 +8,9 @@ const PageContainer = props =>{
 
     useEffect(() =>{
         axios.get("https://swapi.co/api/people/").then(res =>{
-            console.log(res.data.results)
+            // console.log(res.data.results)
             setNames(res.data.results)
+
         }).catch(error=>{
             console.log('the data was not returned', error)
         })
@@ -17,7 +18,6 @@ const PageContainer = props =>{
 
     return (
         <div className="container">
-            <h2 className="header">Star Wars Characters</h2>
             <CharCard key={names} names={names}/>
         </div>
     )
